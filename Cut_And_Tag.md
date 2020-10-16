@@ -140,20 +140,15 @@ Inactivate proteinase K for 10 min at 95°C.
  
 
 {:start="32"}
-32. Perform column cleanup, eluting in 10 uL.
-(Zmyo DNA Clean & Concentrator Kit, protocol for “PCR Product, DNA Fragment” – 5bindingbuffer:1sample) Use homemade DNA binding buffer (recipe), for wash buffer use (80% EtOH, 10mM Tris, pH~8).
+32. Perform column cleanup, eluting in 25 uL.
+> (Zmyo DNA Clean & Concentrator Kit, protocol for “PCR Product, DNA Fragment” – 5bindingbuffer:1sample, may need to transfer to larger plate than PCR tubes). homemade DNA binding buffer (recipe: 5M guanidinium HCl, 30%isopropanol, 90mM KOH, 150mM acetic acid), for wash buffer use (80% EtOH, 10mM Tris, pH~8).
 
-Add 10 mM Tris-HCl pH8 and 1 mM EDTA containing 1/400 RNAse A to each sample:
-
-RNAse Master Mix (per sample)
-0.25 uL 1M Tris-HCl
-0.06 uL 0.5M EDTA 
-0.125 uL of 1/200 dilution of RNAse A
-14.6 uL RNAse/DNAse-free water
-
-Then add 15 uL of master mix to each 10 uL of eluted sample.
-
-> The large excess of RNA over DNA in the purified nucleic acid acts as a carrier during purification, but this RNA can skew estimates of DNA concentrations in the final libraries, so is best digested away prior to PCR and column clean-up.
+> OPTIONAL STEP (Present in Henikoff protocol v2 but not v3):
+> Add 5uL TE+RNAse A to each sample:
+> RNAse Master Mix (per sample)
+> 0.0625 uL RNAse A
+> 5uL TE
+> Then add 5 uL of master mix to each 20 uL of eluted sample. The large excess of RNA over DNA in the purified nucleic acid acts as a carrier during purification, but this RNA can skew estimates of DNA concentrations in the final libraries, so it can optionally be digested away prior to PCR and subsequent cleanup/quantification.
 
 {:start="41"}
 41. Incubate 10 min 37 °C and store at 4 °C or proceed directly to the next step.
