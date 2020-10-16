@@ -1,7 +1,7 @@
-This protocol is adapted off of the Cut&Tag benchtop protocol (V3) published by Henikoff lab. We adapted some steps to be more convenient for using multichannel pippettes and 96-well plates for easier parallelization. The main differences are:
+This protocol is adapted off of the [Cut&Tag benchtop protocol (V3)](https://www.protocols.io/view/bench-top-cut-amp-tag-bcuhiwt6) published by Henikoff lab. We adapted some steps to be more convenient for using multichannel pippettes and 96-well plates for easier parallelization. The main differences are:
 - In steps where the original protocol has large volume wash steps, we replaced with iterative smaller volume washes (to fit in 96-well PCR plates or strip tubes)
 - A test qPCR is useful easy way to estimate complexity of the library to gauge success without sequencing.
-- Replaced phenol/chloroform cleanup with spin columns (which can be purchased in 96-well plate format). **Note that this probably fine for histone mark profiling where tagmented fragments are usually >200 nt. However, this may be inappropriate for transcription factors, which may produce smaller tagmentation fragments that might not bind to spin columns efficiently**
+- Replaced phenol/chloroform cleanup with spin columns (which can be purchased in 96-well plate format). *Note that this probably fine for histone mark profiling where tagmented fragments are usually >200 nt. However, this may be inappropriate for transcription factors, which may produce smaller tagmentation fragments that might not bind to spin columns efficiently*
 
 ## Before beginning:
 
@@ -45,10 +45,12 @@ Here is a buffer calculator tool.
 
 > If necessary, cells can be cryopreserved in 10% DMSO using a Mr. Frosty isopropyl alcohol chamber. For fresh or frozen tissues, we recommend adapting tissue preparation procedures developed for CUT&RUN: https://www.protocols.io/view/cut-run-with-drosophila-tissues-umfeu3n and https://epigeneticsandchromatin.biomedcentral.com/articles/10.1186/s13072-018-0243-8 (Figures 5-6). 
 
+{:start="7"}
 7. Centrifuge 3 min 600 x g at room temperature and withdraw liquid. 
 
 > This can be done in any 96 well plate that pellets cells well and can hold enough volume of the cell samples (at ~1M cells per mL in growing cultures, the 100-500K cell aliquots from step6 will be roughly 100-500uL volumes but this volume could vary depending on the cell density). I have found that cell pelleting can be done in the 0.5mL cryotubes in a cryo-matrix rack. This is convenient because you can use the multichannel.
 
+{:start="8"}
 8. Resuspend each sample in at least 1 volume Wash buffer at room temperature, centrifuge 3 min 600 x g at room temperature and withdraw liquid.
 
 9. Resuspend each sample in 95uL Wash buffer (and transfer to 96-well PCR plate). Add 10 uL bead slurry, dropwise. Mix gently with repeated pipetting. Seal plate with tape or foil and place on nutator for 5-10 min.
@@ -57,12 +59,14 @@ Here is a buffer calculator tool.
 
 ### Bind primary antibody (2 hr to overnight)
 
+{:start="11"}
 11. Resuspend each sample in 50 uL ice-cold Antibody buffer and place on ice.
 
 12. Add 0.5-1 µL primary antibody to each sample. Mix gently with repeated pipetting.
  
 > The Henikoff lab uses 1:50 - 1:100 by default, or the manufacturer’s recommended concentration for immunofluorescence.
 
+{:start="13"}
 13. Seal plate. Place on nutator at 4 °C and incubate at overnight to several days at 4 °C. Alternatively, nutate for 2 hr at room temperature. 
 
 > CRITICAL STEP: To evaluate success of the procedure without requiring library preparation, include in parallel a positive control antibody (e.g.α-H3K27me3), and optionally a negative control antibody (e.g. rabbit α-mouse IgG).
@@ -72,6 +76,7 @@ Here is a buffer calculator tool.
 
 ### Bind secondary antibody (1 hr)
 
+{:start="14"}
 14. After a quick spin to remove liquid from cap (<100 x g), place each tube on the magnet stand to clear and pull off the liquid.
  
 15. Mix secondary antibody 1:100 in Dig-wash buffer and squirt in 100 µL per sample. Gently pipette to mix and dislodge the beads from the sides of the well.
@@ -88,18 +93,20 @@ Although not needed for CUT&RUN, the secondary antibody step is required for CUT
 
 ### Bind pA-Tn5 adapter complex (1.5 hr)
 
+{:start="20"}
 20. Mix pA-Tn5 adapter complex in Dig-300 buffer to a final concentration of 1:250 for 100 µL per sample.
 
 > CRITICAL STEP: pA-Tn5 aliquots received from the CUT&RUN team are pre-loaded with adapters suitable for single- or dual-indexing on a paired-end Illumina flow-cell platform. 
+
+{:start="21"}
 21. After a quick spin, place the tubes on the magnet stand to clear and pull off the liquid.
 
 22. Add 100 µL of pA-Tn5/Dig-300 mix and gently mix by pipetting.
 
 > The increased NaCl is necessary to avoid pA-Tn5 binding to accessible sites in chromatin, but can result in clumping, and in the presence of 0.05% digitonin can cause cell lysis. By reducing the digitonin concentration to 0.01% (from 0.05%) in the 300 mM NaCl buffer these problems are minimized. Barely visible clumps may appear when beads are suspended, but this does not appear to affect the efficiency of incubations or washes.
 
+{:start="23"}
 23. Place the tubes on a nutator at room temperature for 1 hr.
-
-01:00:00
 
 24. After a quick spin, place the tubes on a magnet stand to clear and pull off the liquid.
 
@@ -109,6 +116,8 @@ Although not needed for CUT&RUN, the secondary antibody step is required for CUT
 
 ### Tagmentation (1 hr)
 
+
+{:start="27"}
 27. After a quick spin, place the tube on the magnet stand to clear and pull off the liquid.
 
 28. Add 60 uL Tagmentation buffer and mix gently by pipetting.
@@ -118,6 +127,8 @@ Although not needed for CUT&RUN, the secondary antibody step is required for CUT
 
 ### DNA Extraction (1 hr)
 
+
+{:start="30"}
 30. To stop tagmentation and solubilize DNA fragments, add 2 uL 0.5M EDTA, 0.6 uL 10% SDS to each sample (or 2.6 uL of master mix). Then add 1 uL of 10 mg/mL (0.5 uL of 20 mg/mL) Proteinase K to each sample.
 >  The proteinase K shouldn’t be added to the mastermix since it may not be stable in such a high SDS concentration. 
 
@@ -128,6 +139,7 @@ Inactivate proteinase K for 10 min at 95°C.
 > It is typical for the beads to form a large clump during incubation owing to the viscoelasticity of DNA. However, for abundant genome-wide epitopes, large-scale fragmentation of the genome will normally result in reduced clumping and release of beads into suspension, turning the liquid brownish relative to negative controls. 
  
 
+{:start="32"}
 32. Perform column cleanup, eluting in 10 uL.
 (Zmyo DNA Clean & Concentrator Kit, protocol for “PCR Product, DNA Fragment” – 5bindingbuffer:1sample) Use homemade DNA binding buffer (recipe), for wash buffer use (80% EtOH, 10mM Tris, pH~8).
 
@@ -143,6 +155,7 @@ Then add 15 uL of master mix to each 10 uL of eluted sample.
 
 > The large excess of RNA over DNA in the purified nucleic acid acts as a carrier during purification, but this RNA can skew estimates of DNA concentrations in the final libraries, so is best digested away prior to PCR and column clean-up.
 
+{:start="41"}
 41. Incubate 10 min 37 °C and store at 4 °C or proceed directly to the next step.
 00:10:00
 
@@ -150,6 +163,7 @@ FINAL VOLUME- 25uL
 
 PCR (1 hr)
 
+{:start="42"}
 42. Perform a test-run qPCR to determine whether or not the level of Threshold cycles (CT) matches what is expected. If desired, run a no-input negative control alongside samples of interest. 
 
 Original PCR Recipe:
