@@ -30,6 +30,7 @@ Here is a buffer calculator tool.
 
 ### Prep Beads and Cells
 
+{:start="2"}
 2. Gently resuspend and withdraw enough of the ConA bead slurry such that there will be 10 μL for each final sample of 100,000 cells. The following is for 16 samples.
 
 3. Transfer 170 µL ConA bead slurry into 1.6 mL Binding buffer in a 1.5 mL tube and mix by pipetting. Place the tube on a magnet stand to clear (30 s to 2 min). 
@@ -46,7 +47,7 @@ Here is a buffer calculator tool.
 
 7. Centrifuge 3 min 600 x g at room temperature and withdraw liquid. 
 
- > This can be done in any 96 well plate that pellets cells well and can hold enough volume of the cell samples (at ~1M cells per mL in growing cultures, the 100-500K cell aliquots from step6 will be roughly 100-500uL volumes but this volume could vary depending on the cell density). I have found that cell pelleting can be done in the 0.5mL cryotubes in a cryo-matrix rack. This is convenient because you can use the multichannel.
+> This can be done in any 96 well plate that pellets cells well and can hold enough volume of the cell samples (at ~1M cells per mL in growing cultures, the 100-500K cell aliquots from step6 will be roughly 100-500uL volumes but this volume could vary depending on the cell density). I have found that cell pelleting can be done in the 0.5mL cryotubes in a cryo-matrix rack. This is convenient because you can use the multichannel.
 
 8. Resuspend each sample in at least 1 volume Wash buffer at room temperature, centrifuge 3 min 600 x g at room temperature and withdraw liquid.
 
@@ -54,7 +55,7 @@ Here is a buffer calculator tool.
 
 10. After a quick spin to remove liquid from foil (<100 x g), place the PCR plate on a magnet stand to clear and withdraw the liquid. 
 
- ### Bind primary antibody (2 hr to overnight)
+### Bind primary antibody (2 hr to overnight)
 
 11. Resuspend each sample in 50 uL ice-cold Antibody buffer and place on ice.
 
