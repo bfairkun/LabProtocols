@@ -4,6 +4,7 @@
 - [Growing LCLs for chromatin-association RNA isolation]()
 - [Cut&Tag aliquots]()
 - [Cut&Tag for 96 well plates](Cut_And_Tag.md)
+    - useful for performing cut and tag with more than ~16 samples
 
 ### Support or Contact
 

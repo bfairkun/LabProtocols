@@ -1,11 +1,11 @@
-Load adapters onto pA-Tn5:
-Dilute the ~15uM protein to 11uM while maintaining the same buffer composition. (Add mixture of HEGX+ buffer, but with 50% glycerol)
+### Load adapters onto pA-Tn5:
+- Dilute the ~15uM protein to 11uM while maintaining the same buffer composition. (Add mixture of HEGX+ buffer, but with 50% glycerol)
 
-•	Adaptation of the FAQ on protocols.io and the nature paper for cut and tag:
-o	Resuspend oligos to 200uM in 10mM Tris pH8, 50mM NaCl, 1mM EDTA
-o	Mix 2.5uL MEB & 2.5uL MERev, anneal by heating to 95°C for 2min on PCR block, let cool slowly on benchtop for 5min to anneal oligos. Do the same for MEA & MERev. Now we have 5uL 100uM annealed MEA/Rev and 5uL 100uM MEB/Rev.
-o	Add 4uL of MEA/MERev and 4uL MEB/Rev to 50uL 11uM protein
-o	Incubate for 1 hour at room temp with rotation (Step1 on protocols.io)
+- Adaptation of the FAQ on protocols.io and the nature paper for cut and tag:
+    - Resuspend oligos to 200uM in 10mM Tris pH8, 50mM NaCl, 1mM EDTA
+    - Mix 2.5uL MEB & 2.5uL MERev, anneal by heating to 95°C for 2min on PCR block, let cool slowly on benchtop for 5min to anneal oligos. Do the same for MEA & MERev. Now we have 5uL 100uM annealed MEA/Rev and 5uL 100uM MEB/Rev.
+    - Add 4uL of MEA/MERev and 4uL MEB/Rev to 50uL 11uM protein
+    - Incubate for 1 hour at room temp with rotation (Step1 on protocols.io)
 
 Proceed with cut and tag.
 
