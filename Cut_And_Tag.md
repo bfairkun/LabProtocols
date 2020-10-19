@@ -1,7 +1,8 @@
-This protocol is adapted off of the [Cut&Tag benchtop protocol (V3)](https://www.protocols.io/view/bench-top-cut-amp-tag-bcuhiwt6) published by Henikoff lab. We adapted some steps to be more convenient for using multichannel pippettes and 96-well plates for easier parallelization. The main differences are:
+This protocol is adapted off of the [Cut&Tag benchtop protocol (V3)](https://www.protocols.io/view/bench-top-cut-amp-tag-bcuhiwt6) published by Henikoff lab. We adapted some steps to be more convenient for using multichannel pippettes and 96-well plates for easier parallelization. We have tested this protocol and we think it works similarly well to the original protocol. The main changes we made are:
 - In steps where the original protocol has large volume wash steps, we replaced with iterative smaller volume washes (to fit in 96-well PCR plates or strip tubes)
-- A test qPCR is useful easy way to estimate complexity of the library to gauge success without sequencing.
 - Replaced phenol/chloroform cleanup with spin columns (which can be purchased in 96-well plate format). *Note that this probably fine for histone mark profiling where tagmented fragments are usually >200 nt. However, this may be inappropriate for transcription factors, which may produce smaller tagmentation fragments that might not bind to spin columns efficiently*
+- tagmentation is done in 60uL volume instead of 300uL volume (but still using the same total amount of tn5 enzyme, therefore, higher concentration of enzyme). This is done to make column purification after tagmentation more convenient (the 96-well plate columns don't hold very much volume.)
+- A test qPCR is useful easy way to estimate complexity of the library to gauge success without sequencing.
 
 ## Before beginning:
 
@@ -87,7 +88,7 @@ Although not needed for CUT&RUN, the secondary antibody step is required for CUT
 
 17. After a quick spin, place the tubes on a magnet stand to clear and withdraw the liquid.
 
-18. Add 180 uL Dig-wash buffer. Invert 10x or gently pipette to allow the solution to dislodge most or all of the beads.
+18. Add 150 uL Dig-wash buffer. Invert 10x or gently pipette to allow the solution to dislodge most or all of the beads.
 
 19. Repeat Steps 17-18 twice.
 
@@ -103,14 +104,14 @@ Although not needed for CUT&RUN, the secondary antibody step is required for CUT
 
 22. Add 100 µL of pA-Tn5/Dig-300 mix and gently mix by pipetting.
 
-> The increased NaCl is necessary to avoid pA-Tn5 binding to accessible sites in chromatin, but can result in clumping, and in the presence of 0.05% digitonin can cause cell lysis. By reducing the digitonin concentration to 0.01% (from 0.05%) in the 300 mM NaCl buffer these problems are minimized. Barely visible clumps may appear when beads are suspended, but this does not appear to affect the efficiency of incubations or washes.
+> The increased NaCl is necessary to avoid pA-Tn5 binding to accessible sites in chromatin, but can result in clumping, and in the presence of 0.05% digitonin can cause cell lysis. By reducing the digitonin concentration to 0.01% (from 0.05%) in the 300 mM NaCl buffer these problems are minimized. Barely visible clumps may appear when beads are suspended, but this does not appear to affect the efficiency of incubations or washes. If there is clumping, be careful to ensure that beads do not get lodged on the upper sides of the tubes where they may not effectively be treated with washes and enzymatic steps.
 
 {:start="23"}
 23. Place the tubes on a nutator at room temperature for 1 hr.
 
 24. After a quick spin, place the tubes on a magnet stand to clear and pull off the liquid.
 
-25. Add 180 uL Dig-300 buffer. Invert 10x or gently vortex to allow the solution to dislodge most or all of the beads.
+25. Add 150 uL Dig-300 buffer. Invert 10x or gently vortex to allow the solution to dislodge most or all of the beads.
 
 26. Repeat steps 24-25 4 times.
 
@@ -120,18 +121,21 @@ Although not needed for CUT&RUN, the secondary antibody step is required for CUT
 {:start="27"}
 27. After a quick spin, place the tube on the magnet stand to clear and pull off the liquid.
 
-28. Add 60 uL Tagmentation buffer and mix gently by pipetting.
+28. Add 165 uL Tagmentation buffer and mix gently by pipetting.
 
+> It helps that the tagmentation reaction volume is a bit larger than the previous wash steps which may lodge clumps of beads on the side walls of tubes.
+
+{:start="29"}
 29. Incubate at 37 ºC for 1 hr.
-01:00:00
 
 ### DNA Extraction (1 hr)
 
 
 {:start="30"}
-30. To stop tagmentation and solubilize DNA fragments, add 2 uL 0.5M EDTA, 0.6 uL 10% SDS to each sample (or 2.6 uL of master mix). Then add 1 uL of 10 mg/mL (0.5 uL of 20 mg/mL) Proteinase K to each sample.
->  The proteinase K shouldn’t be added to the mastermix since it may not be stable in such a high SDS concentration. 
+30. To stop tagmentation and solubilize DNA fragments, add 5.5 uL 0.5M EDTA, 1.65 uL 10% SDS to each sample (or 7.15uL of master mix). Then add 1.4 uL of 10 mg/mL (0.7 uL of 20 mg/mL) Proteinase K to each sample.
+>  The proteinase K shouldn’t be added to the mastermix in case it is not be stable in such a high SDS concentration. 
 
+{:start="31"}
 31. Mix by full-speed vortexing ~2 s, and incubate 1 hr 50 ºC or 37 ºC overnight to digest.
 01:00:00
 Inactivate proteinase K for 10 min at 95°C. 
@@ -144,10 +148,15 @@ Inactivate proteinase K for 10 min at 95°C.
 > (Zmyo DNA Clean & Concentrator Kit, protocol for “PCR Product, DNA Fragment” – 5bindingbuffer:1sample, may need to transfer to larger plate than PCR tubes). homemade DNA binding buffer (recipe: 5M guanidinium HCl, 30%isopropanol, 90mM KOH, 150mM acetic acid), for wash buffer use (80% EtOH, 10mM Tris, pH~8).
 
 > OPTIONAL STEP (Present in Henikoff protocol v2 but not v3):
+>
 > Add 5uL TE+RNAse A to each sample:
+>
 > RNAse Master Mix (per sample)
+>
 > 0.0625 uL RNAse A
+>
 > 5uL TE
+>
 > Then add 5 uL of master mix to each 20 uL of eluted sample. The large excess of RNA over DNA in the purified nucleic acid acts as a carrier during purification, but this RNA can skew estimates of DNA concentrations in the final libraries, so it can optionally be digested away prior to PCR and subsequent cleanup/quantification.
 
 {:start="41"}
