@@ -1,7 +1,7 @@
 This protocol is adapted off of the [Cut&Tag benchtop protocol (V3)](https://www.protocols.io/view/bench-top-cut-amp-tag-bcuhiwt6) published by Henikoff lab. We adapted some steps to be more convenient for using multichannel pippettes and 96-well plates for easier parallelization. We have tested this protocol and we think it works similarly well to the original protocol. The main changes we made are:
 - In steps where the original protocol has large volume wash steps, we replaced with iterative smaller volume washes (to fit in 96-well PCR plates or strip tubes)
 - Replaced phenol/chloroform cleanup with spin columns (which can be purchased in 96-well plate format). *Note that this probably fine for histone mark profiling where tagmented fragments are usually >200 nt. However, this may be inappropriate for transcription factors, which may produce smaller tagmentation fragments that might not bind to spin columns efficiently*
-- tagmentation is done in 60uL volume instead of 300uL volume (but still using the same total amount of tn5 enzyme, therefore, higher concentration of enzyme). This is done to make column purification after tagmentation more convenient (the 96-well plate columns don't hold very much volume.)
+- tagmentation is done in 165uL volume instead of 300uL volume (but still using the same total amount of tn5 enzyme, therefore, higher concentration of enzyme). This is done to make column purification after tagmentation more convenient (the 96-well plate columns don't hold very much volume.)
 - A test qPCR is useful easy way to estimate complexity of the library to gauge success without sequencing.
 
 ## Before beginning:
@@ -23,11 +23,8 @@ Modified Henikoff Protocol:
 ### Prepare buffers
 
 1.	Prepare buffers. Same as Henikoff protocol.
-a.	10uL ConA beads per sample
-b.	10mL binding buffer
-c.	200uL wash buffer per sample
 
-Here is a buffer calculator tool.
+> Here is an excel that you can also use to calculate buffer recipes.
 
 ### Prep Beads and Cells
 
@@ -90,7 +87,7 @@ Although not needed for CUT&RUN, the secondary antibody step is required for CUT
 
 18. Add 150 uL Dig-wash buffer. Invert 10x or gently pipette to allow the solution to dislodge most or all of the beads.
 
-19. Repeat Steps 17-18 twice.
+19. Repeat Steps 17-18 4 times (total of 5 washes).
 
 ### Bind pA-Tn5 adapter complex (1.5 hr)
 
@@ -161,33 +158,21 @@ Inactivate proteinase K for 10 min at 95°C.
 
 {:start="41"}
 41. Incubate 10 min 37 °C and store at 4 °C or proceed directly to the next step.
-00:10:00
 
-FINAL VOLUME- 25uL
-
-PCR (1 hr)
 
 {:start="42"}
 42. Perform a test-run qPCR to determine whether or not the level of Threshold cycles (CT) matches what is expected. If desired, run a no-input negative control alongside samples of interest. 
-
-Original PCR Recipe:
-21 µL DNA + 2 µL Universal i5 primer (10 µM) + 2 µL uniquely barcoded i7 primers (10 µM) In a thin-wall 0.5 ml PCR tube, using a different barcode for each sample. Save remaining DNA as a backup.
-
 - Nextera primers or indexed primers described by Buenrostro, J.D. et al. Single-cell chromatin accessibility reveals principles of regulatory variation. Nature 523:486 (2015).
 
-Alternative Recipe:
+> PCR final concentrations:
+> 
+> 400uM barcoded fwd primer, 400uM barcoded rev primer, 0.5X SYBR green (for qPCR), NEBNext High fidelity PCR mastermix (1X final concentration), template.
+>
+> - For test qPCRs, I use 1uL of the tagmented sample in 10uL PCR reactions.
+> - For final PCRs, I usually use ~12uL (half) of the tagmented sample for PCR, in 25uL reactions.
+> - The number of cycles to run the final PCR should be the minimum number of cycles to get enough material to submit for sequencing which corresponds roughly to where qPCR signal starts to rise above baseline. Ideally all samples should be run with the same number of PCR cycles, and all will be in exponential phase of amplifcation.
+> - If you do the qPCR and PCR like this, a reasonable rule of thumb is to identify the number of cycles at which the test qPCR reaches half max signal, then subtract 3 cycles for the final PCR which uses ~5x as much template in terms of concentration. The idea is that the final PCR should be just starting to become visible in qPCR during the last couple cycles. Alternatively, you can always just run the final PCR in the qPCR machine and observe in real time when to stop the reaction.
 
-Master Mix (multiply by number of samples + 0.5 extra) 
-- can also double once more if you wish to do 2 qPCR replicates per sample (recommended)
-
-0.8 uL Nextera 5XX primer
-0.8 uL Nextera 7XX primer
-4.2 uL NEB Master Mix with 0.5X SyBr Green
-
-Distribute 5.8uL of master mix into each well (or 11.6 if doubling) and separately add 4.2 uL of template DNA to each well (or 8.4 if doubling. Mix all in one well and divide into 2 x 10 uL reactions)
-
-Total reaction volume- 10uL
-
-
-Perform Ampure Cleanup (1.3X beads to sample volume) and quantify using a Qubit (High Sensitivity DNA)
+{:start="43"}
+Perform Ampure Cleanup (1.3X beads to sample volume) and quantify using a Qubit (High Sensitivity DNA). Pool samples as needed. UChicago sequencing core requests that final samples about 2ng/uL or greater.
 
