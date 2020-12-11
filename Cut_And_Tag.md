@@ -166,7 +166,7 @@ Inactivate proteinase K for 10 min at 95°C.
 
 > PCR final concentrations:
 > 
-> 400uM barcoded fwd primer, 400uM barcoded rev primer, 0.5X SYBR green (for qPCR), NEBNext High fidelity PCR mastermix (1X final concentration), template.
+> 400nM barcoded fwd primer, 400nM barcoded rev primer, 0.5X SYBR green (for qPCR), NEBNext High fidelity PCR mastermix (1X final concentration), template.
 >
 > - For test qPCRs, I use 1uL of the tagmented sample in 10uL PCR reactions.
 > - For final PCRs, I usually use ~12uL (half) of the tagmented sample for PCR, in 25uL reactions.
