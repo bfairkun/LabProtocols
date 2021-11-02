@@ -41,15 +41,15 @@ Modified Henikoff Protocol:
 
 > CRITICAL STEP:All steps prior to the cell permeabilization are performed at room temperature to minimize stress on the cells. We recommend that cavitation during resuspension and vigorous vortexing be avoided.
 
-> If necessary, cells can be cryopreserved in 10% DMSO using a Mr. Frosty isopropyl alcohol chamber. For fresh or frozen tissues, we recommend adapting tissue preparation procedures developed for CUT&RUN: https://www.protocols.io/view/cut-run-with-drosophila-tissues-umfeu3n and https://epigeneticsandchromatin.biomedcentral.com/articles/10.1186/s13072-018-0243-8 (Figures 5-6). 
+> If necessary, cells can be cryopreserved in 10% DMSO using a Mr. Frosty isopropyl alcohol chamber. For fresh or frozen tissues, we recommend adapting tissue preparation procedures developed for CUT&RUN: https://www.protocols.io/view/cut-run-with-drosophila-tissues-umfeu3n and https://epigeneticsandchromatin.biomedcentral.com/articles/10.1186/s13072-018-0243-8 (Figures 5-6). For my Cut&Tag experiments, I have been freezing 500,000 cells in 0.5mL in cryomatrix tubes.
 
 {:start="7"}
-7. Centrifuge 3 min 600 x g at room temperature and withdraw liquid. 
+7. Centrifuge 3 min 600 x g at room temperature and withdraw liquid.
 
-> This can be done in any 96 well plate that pellets cells well and can hold enough volume of the cell samples (at ~1M cells per mL in growing cultures, the 100-500K cell aliquots from step6 will be roughly 100-500uL volumes but this volume could vary depending on the cell density). I have found that cell pelleting can be done in the 0.5mL cryotubes in a cryo-matrix rack. This is convenient because you can use the multichannel.
+> This can be done in any 96 well plate that pellets cells well and can hold enough volume of the cell samples (at ~1M cells per mL in growing cultures, the 100-500K cell aliquots from step6 will be roughly 100-500uL volumes but this volume could vary depending on the cell density). I have found that cell pelleting can be done in the 0.5mL cryotubes in a cryo-matrix rack. This is convenient because you can use the multichannel. If using cryomatrix tubes, I actually recommend doing a quick spin in the cryomatrix tubes to get any liquid stuck on the sides or caps, then transferring the entire mix to a 96 well plate or PCR strip tube where it is easier to see the pellet, then doing another spin (3 min 600 x g) and withdrawling liquid, being careful to not disturb the pellet.
 
 {:start="8"}
-8. Resuspend each sample in at least 1 volume Wash buffer at room temperature, centrifuge 3 min 600 x g at room temperature and withdraw liquid.
+8. To wash cells again, resuspend each sample in at least 1 volume Wash buffer at room temperature, centrifuge 3 min 600 x g at room temperature and withdraw liquid.
 
 9. Resuspend each sample in 95uL Wash buffer (and transfer to 96-well PCR plate). Add 10 uL bead slurry, dropwise. Mix gently with repeated pipetting. Seal plate with tape or foil and place on nutator for 5-10 min.
 
