@@ -51,7 +51,7 @@ Modified Henikoff Protocol:
 {:start="8"}
 8. To wash cells again, resuspend each sample in at least 1 volume Wash buffer at room temperature, centrifuge 3 min 600 x g at room temperature and withdraw liquid.
 
-9. Resuspend each sample in 95uL Wash buffer (and transfer to 96-well PCR plate). Add 10 uL bead slurry, dropwise. Mix gently with repeated pipetting. Seal plate with tape or foil and place on nutator for 5-10 min.
+9. Resuspend each sample in 95uL Wash buffer (and transfer to 96-well PCR plate or strip tube if not already in one). Add 10 uL bead slurry, dropwise. Mix gently with repeated pipetting. Seal plate with tape or foil and place on nutator for 5-10 min.
 
 10. After a quick spin to remove liquid from foil (<100 x g), place the PCR plate on a magnet stand to clear and withdraw the liquid. 
 
