@@ -135,7 +135,7 @@ Although not needed for CUT&RUN, the secondary antibody step is required for CUT
 {:start="31"}
 31. Mix by full-speed vortexing ~2 s, and incubate 1 hr 50 ºC or 37 ºC overnight to digest.
 01:00:00
-Inactivate proteinase K for 10 min at 95°C. 
+
 
 > It is typical for the beads to form a large clump during incubation owing to the viscoelasticity of DNA. However, for abundant genome-wide epitopes, large-scale fragmentation of the genome will normally result in reduced clumping and release of beads into suspension, turning the liquid brownish relative to negative controls. 
  
